@@ -11,11 +11,9 @@
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
-            <RowDefinition Height="69*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="277*"></ColumnDefinition>
-            <ColumnDefinition Width="223*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <SplitView x:Name="mySplitView" Margin="0,0,5.2,0" Background="DarkSlateGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
@@ -49,11 +47,32 @@
             </SplitView.Pane>
 
             <SplitView.Content>
-                <StackPanel>
 
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="450,0,0,0"/>
 
+                    </StackPanel>
 
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="0,0,0,0"/>
 
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="450,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="0,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="450,0,0,0"/>
+
+                    </StackPanel>
 
                 </StackPanel>
             </SplitView.Content>

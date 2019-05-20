@@ -47,18 +47,40 @@
             </SplitView.Pane>
 
             <SplitView.Content>
-                <StackPanel>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Height="999" Margin="0,0,0,0" VerticalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal" Height="250">
-                            <TextBlock Text="hej" FontSize="35" Foreground="White" Margin="438,0,-1443,0" Height="250" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                        </StackPanel>
+                
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Height="1000" Margin="0,0,-0.2,0" VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="450,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="0,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="450,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="0,0,0,0"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="200">
+                        <TextBlock Width="1000" Margin="450,0,0,0"/>
+
                     </StackPanel>
 
 
-
-
-
                 </StackPanel>
+
+
+
+
+
             </SplitView.Content>
         </SplitView>
         <RelativePanel Margin="0,0,2.2,0" HorizontalAlignment="Stretch" Height="549" VerticalAlignment="Top">
