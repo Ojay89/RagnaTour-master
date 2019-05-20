@@ -22,6 +22,8 @@ namespace RagnaTour.ViewModel
             singleton = UserCatalogSingleton.Instance;
             AddCommand = new RelayCommand(toAddNewUser);
             DeleteCommand = new RelayCommand(toDeleteUser);
+            SaveCommand = new RelayCommand(SaveToFile);
+            Load();
             _users = new ObservableCollection<User>();
             _selectedUser = new User();
             //userCatalog = new UserCatalog();
@@ -39,10 +41,11 @@ namespace RagnaTour.ViewModel
  
         public RelayCommand AddCommand { get; set; }
         public RelayCommand DeleteCommand { get; set; }
+        public RelayCommand SaveCommand { get; set; }
 
         public bool DoesUserExist(string username, string password)
         {
-            User myuser = new User(username, password);
+            User myuser = new User(username, password, name);
             //bool check = userCatalog.CheckLogin(myuser);
             bool check = singleton.CheckLogin(myuser);
 
@@ -65,6 +68,8 @@ namespace RagnaTour.ViewModel
         }
 
         private string _password;
+        private string name;
+
         public string Password
         {
             get { return _password; }
@@ -73,16 +78,16 @@ namespace RagnaTour.ViewModel
 
         public int UserCount
         {
-            get { return singleton.Users.Count; }
+            get { return singleton.Users.Count; }            //singleton.SaveAsync();
         }
 
-
-
+     
         public void toAddNewUser()
         {
-            User NewUser = new User(_username, _password);
+            User NewUser = new User(_username, _password, _name);
 
             singleton.addUser(NewUser);
+            SaveToFile();
             OnPropertyChanged(nameof(all_Users));
             OnPropertyChanged(nameof(UserCount));
         }
@@ -102,6 +107,17 @@ namespace RagnaTour.ViewModel
             OnPropertyChanged(nameof(UserCount));
         }
 
+        public void SaveToFile()
+        {
+
+            singleton.SaveAsync();
+        }
+
+        private void Load()
+        {
+
+            singleton.LoadAsync();
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

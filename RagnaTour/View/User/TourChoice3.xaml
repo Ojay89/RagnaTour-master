@@ -1,37 +1,37 @@
 ﻿<Page
-    x:Class="RagnaTour.View.User.LoginPage"
+    x:Class="RagnaTour.View.User.TourChoice3"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:RagnaTour.UserViewModel"
+    xmlns:local="using:RagnaTour.View.User"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
             <RowDefinition Height="69*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="218*"></ColumnDefinition>
-            <ColumnDefinition Width="157*"></ColumnDefinition>
+            <ColumnDefinition  Width="277*"></ColumnDefinition>
+            <ColumnDefinition Width="223*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkSlateGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
+        <SplitView x:Name="mySplitView" Margin="0,0,5.2,0" Background="DarkSlateGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
             <SplitView.Pane>
                 <StackPanel Background="Black" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                        <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE10F;"
                         Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
                         <!--<Button Content="Forside" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="151" Height="50" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
-                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <TextBlock Text="Forside" FontSize="18" FontFamily="Calibri Light" Foreground="White" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE779;"
+                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE779;"
                        Width="50" Height="50" Background="Transparent"/>
                         <!--<Button Content="Om os" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
-                        <TextBlock Text="Om os" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <TextBlock Text="Om os" FontSize="18" FontFamily="Calibri Light" Foreground="White" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE707;"
@@ -50,26 +50,17 @@
 
             <SplitView.Content>
                 <StackPanel>
-                    <TextBlock Text="Login Side" FontFamily="Calibri Light" FontSize="70" Foreground="White" Height="83" Margin="10,0,76,0"/>
-                    <TextBlock Text="Username" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
-                    <TextBox Name="usernameBox" Background="White" Height="35" Width="200" Margin="0,0,0,-500"  PlaceholderText="Indtast medarbejdernummer"></TextBox>
-                    <TextBlock Text="Password" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-650"></TextBlock>
 
-                    <PasswordBox x:Name="passwordBox" PasswordChar="*" Background="White" Height="35" Width="200" Margin="0,0,0,-700" PlaceholderText="Indtast password" ></PasswordBox>
-                    <!--<TextBox Background="White" Height="30" Width="200" Margin="0,0,0,-700" ></TextBox>-->
 
-                    <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click"  />
+
+
 
                 </StackPanel>
             </SplitView.Content>
-
         </SplitView>
-
-        <RelativePanel Margin="0,0,0,0">
-            <ToggleButton x:Name="HamburgerButton" Background="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="Hamburgerbutton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
+        <RelativePanel Margin="0,0,2.2,0" HorizontalAlignment="Stretch" Height="549" VerticalAlignment="Top">
+            <ToggleButton x:Name="HamburgerButton" Background="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="Hamburgerbutton_OnChecked" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="50" Foreground="White" Margin="0,0,0.4,0" />
         </RelativePanel>
-
-
 
     </Grid>
 </Page>

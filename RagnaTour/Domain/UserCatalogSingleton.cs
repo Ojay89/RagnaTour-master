@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RagnaTour.Persistency;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,20 @@ namespace RagnaTour.Domain
     public class UserCatalogSingleton
     {
         private List<User> _users;
+        private FilePersistency<User> _fileSource;
 
         private UserCatalogSingleton()
         {
             _users = new List<User>();
-            _users.Add(new User("Omar", "1234"));
-            _users.Add(new User("Oliver", "password"));
-            _users.Add(new User("Saad", "password"));
-            _users.Add(new User("Chris", "password"));
-            _users.Add(new User("1", "1"));
+            _users.Add(new User("Omar", "password", "Omar Jaber"));
+            _users.Add(new User("Oliver", "password", "Oliver Eierstrand"));
+            _users.Add(new User("Saad", "password", "Saad Hassan Kendt"));
+            _users.Add(new User("Chris", "password", "Chris seria"));
+            _users.Add(new User("1", "1", "TEST"));
+            _fileSource = new FilePersistency<User>();
+
         }
+        
 
         private static UserCatalogSingleton _instance;
 
@@ -88,7 +93,19 @@ namespace RagnaTour.Domain
             _users.Remove(du);
         }
 
+        public async Task SaveAsync()
+        {
+            await _fileSource.SaveAsync(_users);
+        }
+
+        public async Task<List<User>> LoadAsync()
+        {
+            _users = await _fileSource.LoadAsync();
+            return _users;
+        }
+
+
     }
 }
- 
+
 

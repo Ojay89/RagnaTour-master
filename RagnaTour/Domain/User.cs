@@ -10,16 +10,18 @@ namespace RagnaTour.Domain
     {
         private string _username;
         private string _userPassword;
+        private string _name;
 
         public User()
         {
 
         }
 
-        public User(string username, string password)
+        public User(string username, string password, string name)
         {
             _username = username;
             _userPassword = password;
+            _name = name;
         }
         public string UserName
         {
@@ -32,5 +34,12 @@ namespace RagnaTour.Domain
             set { _userPassword = value; }
         }
 
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        
     }
 }

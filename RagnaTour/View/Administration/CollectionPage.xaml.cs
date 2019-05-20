@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using RagnaTour.Domain;
+using RagnaTour.View.User;
 
 
 
@@ -51,10 +52,10 @@ namespace RagnaTour
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        //private void MenuButton3_Click(object sender, RoutedEventArgs e)
-        //{
-        //    this.Frame.Navigate(typeof(LoginPag));
-        //}
+        private void MenuButton3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LoginPage));
+        }
 
         private void Hamburgerbutton_OnChecked(object sender, RoutedEventArgs e)
         {
@@ -71,6 +72,9 @@ namespace RagnaTour
             Minboks.Text = dis.Info.ToString();
         }
 
-      
+        private void MenuButton4_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TourChoice));
+        }
     }
 }
