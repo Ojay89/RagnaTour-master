@@ -30,7 +30,7 @@ namespace RagnaTour.View.Administration
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(UserCollection));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -54,6 +54,9 @@ namespace RagnaTour.View.Administration
             this.Frame.Navigate(typeof(LoginPage));
         }
 
-      
+        private void MenuButton4_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TourChoice));
+        }
     }
 }

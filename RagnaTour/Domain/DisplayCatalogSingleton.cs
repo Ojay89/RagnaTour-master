@@ -10,13 +10,13 @@ namespace RagnaTour.Domain
     public class DisplayCatalogSingleton
     {
         private List<Display> _displays;
-        private FilePersistency<Display> _fileSource;
+        private PersistencyDisplay _fileSource;
 
         private DisplayCatalogSingleton()
         {
             _displays = new List<Display>();
             _displays.Add(new Display(1, 1, "navn", "info"));
-            _fileSource = new FilePersistency<Display>();
+            _fileSource = new PersistencyDisplay();
 
         }
 

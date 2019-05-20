@@ -13,11 +13,11 @@ namespace RagnaTour.Domain
         public UserCatalog()
         {
             _users = new List<User>();
-            _users.Add(new User("Omar", "password"));
-            _users.Add(new User("Oliver", "password"));
-            _users.Add(new User("Saad", "password"));
-            _users.Add(new User("Chris", "password"));
-            _users.Add(new User("1", "1"));
+            _users.Add(new User("Omar", "1234", "Omar Jaber"));
+            _users.Add(new User("Oliver", "password", "Oliver Eierstrand"));
+            _users.Add(new User("Saad", "password", "Saad Hassan Kendt" ));
+            _users.Add(new User("Chris", "password", "Chris seria"));
+            _users.Add(new User("1", "1", "TEST"));
         }
 
         public bool CheckLogin(User user)

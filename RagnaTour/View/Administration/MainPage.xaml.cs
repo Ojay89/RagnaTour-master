@@ -16,6 +16,7 @@ using RagnaTour.Domain;
 using RagnaTour.View;
 using RagnaTour.View.User;
 using RagnaTour.ViewModel;
+using RagnaTour.View.Administration;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -64,7 +65,15 @@ namespace RagnaTour
             this.Frame.Navigate(typeof(View.Administration.CreateUser));
         }
 
-       
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UserCollection));
+        }
+
+        private void MenuButton4_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TourChoice));
+        }
     }
 
 }

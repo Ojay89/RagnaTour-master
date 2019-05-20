@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RagnaTour.Domain;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,13 +10,13 @@ using Windows.Storage;
 
 namespace RagnaTour.Persistency
 {
-    public class FilePersistency<T> where T : class
+    public class PersistencyUserName
     {
-        private const string FileName = "RagnaTour.json";
+        private const string FileName = "User.json";
         private CreationCollisionOption _options;
         private StorageFolder _folder;
 
-        public FilePersistency()
+        public PersistencyUserName()
         {
             _options = CreationCollisionOption.OpenIfExists;
 
@@ -24,7 +25,7 @@ namespace RagnaTour.Persistency
             _folder = ApplicationData.Current.LocalFolder;
         }
 
-        public async Task SaveAsync(List<T> data)
+        public async Task SaveAsync(List<User> data)
         {
             /* Then we need to have reference to the file where we can store courses:
              Note that if file exists we do not want to create another one: */
@@ -37,7 +38,7 @@ namespace RagnaTour.Persistency
             await FileIO.WriteTextAsync(dataFile, dataJSON);
         }
 
-        public async Task<List<T>> LoadAsync()
+        public async Task<List<User>> LoadAsync()
         {
             try
             {
@@ -50,13 +51,13 @@ namespace RagnaTour.Persistency
 
                 //Deserialize JSON list to the List<Course> and return it
                 return (dataJSON != null) ?
-                    JsonConvert.DeserializeObject<List<T>>(dataJSON)
-                    : new List<T>();
+                    JsonConvert.DeserializeObject<List<User>>(dataJSON)
+                    : new List<User>();
             }
             catch (FileNotFoundException)
             {
-                await SaveAsync(new List<T>());
-                return new List<T>();
+                await SaveAsync(new List<User>());
+                return new List<User>();
             }
         }
     }

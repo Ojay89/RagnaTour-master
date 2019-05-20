@@ -39,6 +39,14 @@ namespace RagnaTour.View
             this.Frame.Navigate(typeof(LoginPage));
         }
 
+        //private void MenuButton3_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Frame.Navigate(typeof(MainPage));
+        //}
 
+        private void MenuButton4_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TourChoice));
+        }
     }
 }

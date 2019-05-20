@@ -1,4 +1,4 @@
-﻿using RagnaTour.ViewModel;
+﻿using RagnaTour.View.User;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,35 +16,18 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace RagnaTour.View.User
+namespace RagnaTour.View.Administration
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class LoginPage : Page
+    public sealed partial class UserCollection : Page
     {
-        private UserViewModel uvm = new UserViewModel();
-
-        public LoginPage()
+        public UserCollection()
         {
             this.InitializeComponent();
-            this.DataContext = uvm;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string username = usernameBox.Text;
-            string password = passwordBox.Password;
-
-            bool afterCheck = uvm.DoesUserExist(username, password);
-            if (afterCheck == true)
-            {
-                this.Frame.Navigate(typeof(MainPage), usernameBox.Text);
-            }
-        }
-
-
-        
         private void Hamburgerbutton_OnChecked(object sender, RoutedEventArgs e)
         {
             this.mySplitView.IsPaneOpen = !this.mySplitView.IsPaneOpen;
@@ -57,13 +40,29 @@ namespace RagnaTour.View.User
         }
 
         private void MenuButton3_Click(object sender, RoutedEventArgs e)
+        
+            {
+                this.Frame.Navigate(typeof(LoginPage));
+            }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(LoginPage));
+            this.Frame.Navigate(typeof(CreateUser));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreateUser));
         }
 
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(TourChoice));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CollectionPage));
         }
     }
 }
