@@ -168,7 +168,7 @@ namespace RagnaTour.ViewModel
 
             //await _tourCatalog.LoadAsync();
             _tour1 = new ObservableCollection<Display>(_tourCatalog.Tour1);
-            //OnPropertyChanged(nameof(tour1));
+            //OnPropertyChanged(nameof(tour1));;
         }
 
         public void toAddR1()
