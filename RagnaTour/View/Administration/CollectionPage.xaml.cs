@@ -76,5 +76,7 @@ namespace RagnaTour
         {
             this.Frame.Navigate(typeof(TourChoice));
         }
+
+        
     }
 }

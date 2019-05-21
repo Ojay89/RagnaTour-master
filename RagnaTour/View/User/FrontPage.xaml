@@ -8,7 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
     <Grid RenderTransformOrigin="0.529,0.5" Background="Green">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
@@ -25,25 +24,21 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                         Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                        <!--<Button Content="Forside" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="151" Height="50" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
                         <TextBlock Text="Forside" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE779;"
                        Width="50" Height="50" Background="Transparent"/>
-                        <!--<Button Content="Om os" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
                         <TextBlock Text="Om os" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE707;"
                        Width="50" Height="50" Background="Transparent" Click="MenuButton4_Click"/>
-                        <!--<Button Content="Om os" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
                         <TextBlock Text="Rundtur" FontSize="18" FontFamily="Calibri Light" Foreground="White" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,500,0,0">
                         <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE748;"
                        Width="50" Height="50" Background="Transparent" Click="MenuButton3_Click"/>
-                        <!--<Button Content="Login" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
                         <TextBlock Text="Login" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                 </StackPanel>

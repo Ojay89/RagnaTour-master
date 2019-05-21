@@ -15,7 +15,7 @@ namespace RagnaTour.Domain
         private UserCatalogSingleton()
         {
             _users = new List<User>();
-            _users.Add(new User("Omar", "password", "Omar Jaber"));
+            //_users.Add(new User("Omar", "password", "Omar Jaber"));
             //_users.Add(new User("Oliver", "password", "Oliver Eierstrand"));
             //_users.Add(new User("Saad", "password", "Saad Hassan Kendt"));
             //_users.Add(new User("Chris", "password", "Chris seria"));

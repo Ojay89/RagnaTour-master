@@ -9,10 +9,18 @@ namespace RagnaTour.Domain
     public class DisplayCatalog
     {
         private List<Display> _displays;
+        private List<Tour> _tour1;
+        private List<Tour> _tour2;
+        private List<Tour> _tour3;
+        private List<Tour> _tour4;
 
         public DisplayCatalog()
         {
             _displays = new List<Display>();
+            _tour1 = new List<Tour>();
+            _tour2 = new List<Tour>();
+            _tour3 = new List<Tour>();
+            _tour4 = new List<Tour>();
             _displays.Add(new Display(1,1,"navn","info"));
         }
 

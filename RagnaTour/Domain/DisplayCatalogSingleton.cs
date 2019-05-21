@@ -15,7 +15,7 @@ namespace RagnaTour.Domain
         private DisplayCatalogSingleton()
         {
             _displays = new List<Display>();
-            _displays.Add(new Display(1, 1, "navn", "info"));
+           // _displays.Add(new Display(1, 1, "navn", "info"));
             _fileSource = new PersistencyDisplay();
 
         }

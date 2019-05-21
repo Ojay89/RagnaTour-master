@@ -119,12 +119,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Tour.cs" />
+    <Compile Include="Domain\TourCatalog.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Domain\UserCatalog.cs" />
     <Compile Include="Domain\UserCatalogSingleton.cs" />
     <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\PersistencyDisplay.cs" />
+    <Compile Include="Persistency\PersistencyTour.cs" />
     <Compile Include="Persistency\PersistencyUserName.cs" />
+    <Compile Include="ViewModel\TourViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="View\Administration\CollectionPage.xaml.cs">
       <DependentUpon>CollectionPage.xaml</DependentUpon>
@@ -174,16 +178,80 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\08_RockMuseum_Roskilde_Ossip%281%29.jpg" />
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\BillederTilProjekt\1.JPG" />
+    <Content Include="Assets\BillederTilProjekt\10.JPG" />
+    <Content Include="Assets\BillederTilProjekt\11.JPG" />
+    <Content Include="Assets\BillederTilProjekt\12.JPG" />
+    <Content Include="Assets\BillederTilProjekt\13.JPG" />
+    <Content Include="Assets\BillederTilProjekt\14.JPG" />
+    <Content Include="Assets\BillederTilProjekt\15.JPG" />
+    <Content Include="Assets\BillederTilProjekt\16.JPG" />
+    <Content Include="Assets\BillederTilProjekt\17.JPG" />
+    <Content Include="Assets\BillederTilProjekt\18.JPG" />
+    <Content Include="Assets\BillederTilProjekt\19.JPG" />
+    <Content Include="Assets\BillederTilProjekt\2.JPG" />
+    <Content Include="Assets\BillederTilProjekt\20.JPG" />
+    <Content Include="Assets\BillederTilProjekt\3.JPG" />
+    <Content Include="Assets\BillederTilProjekt\4.JPG" />
+    <Content Include="Assets\BillederTilProjekt\5.JPG" />
+    <Content Include="Assets\BillederTilProjekt\6.JPG" />
+    <Content Include="Assets\BillederTilProjekt\7.JPG" />
+    <Content Include="Assets\BillederTilProjekt\8.JPG" />
+    <Content Include="Assets\BillederTilProjekt\9.JPG" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\Ragnarock.jpg" />
     <Content Include="Assets\RAGNAROCK_Museum_for_pop_rock_and_youth_culture._Credits_Rasmus_Hjortshoej_-_COAST.jpg" />
     <Content Include="Assets\rAGNAtOUR.JPG" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +315,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

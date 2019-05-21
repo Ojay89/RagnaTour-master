@@ -32,12 +32,11 @@ namespace RagnaTour
             this.InitializeComponent();
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
-
-
+        //}
+        
         
         private void MenuButton1_Click(object sender, RoutedEventArgs e)
         {
@@ -74,6 +73,16 @@ namespace RagnaTour
         {
             this.Frame.Navigate(typeof(TourChoice));
         }
+
+        //private void Button_Click_3(object sender, RoutedEventArgs e)
+        //{
+            
+        //    textbox1.Text = "";
+        //    textbox2.Text = "";
+        //    textbox3.Text = "";
+        //    tbMultiLine.Text = "";
+            
+        //}
     }
 
 }

@@ -20,25 +20,21 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE10F;"
                         Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
-                        <!--<Button Content="Forside" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="151" Height="50" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
                         <TextBlock Text="Forside" FontSize="18" FontFamily="Calibri Light" Foreground="White" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE779;"
                        Width="50" Height="50" Background="Transparent"/>
-                        <!--<Button Content="Om os" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
                         <TextBlock Text="Om os" FontSize="18" FontFamily="Calibri Light" Foreground="White" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Foreground="White" Content="&#xE707;"
                        Width="50" Height="50" Background="Transparent" Click="MenuButton4_Click"/>
-                        <!--<Button Content="Om os" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
                         <TextBlock Text="Rundtur" FontSize="18" FontFamily="Calibri Light" Foreground="White" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,500,0,0">
                         <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE748;"
                        Width="50" Height="50" Background="Transparent" Click="MenuButton3_Click"/>
-                        <!--<Button Content="Login" FontFamily="Calibri Light" Background="Black" Foreground="White" FontSize="20" Width="100" Height="50" ></Button>-->
                         <TextBlock Text="Login" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                 </StackPanel>
@@ -55,7 +51,6 @@
                         <TextBlock Margin="-757.4,0,604.4,30" Text="Antal artefakter:" Foreground="White" TextWrapping="Wrap" Height="22" FontFamily="Calibri Light" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         <TextBlock Margin="-613.4,0,592.4,30" Text="{Binding all_Displays.Count}" Foreground="White" TextWrapping="Wrap" Height="19" FontSize="20"/>
                     </StackPanel>
-
 
                     <StackPanel Orientation="vertical" RenderTransformOrigin="0,0" Margin="0,0,813.8,0" Height="633" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <ListView x:Name="LV" ItemsSource="{Binding all_Displays}" SelectedItem="{Binding SelectedDisplay, Mode=TwoWay}" Background="DarkSlateGray" FontFamily="Calibri Light" Height="580" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Center" Width="669" VerticalAlignment="Stretch" >
@@ -75,22 +70,11 @@
                                         <StackPanel Orientation="Horizontal" Height="35" Margin="14,0,-105,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
                                             <TextBlock Margin="15,0,-180,0" Text="Lokation:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
                                             <TextBox Margin="96,0,-158,0" Text="{Binding Location, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-
                                         </StackPanel>
-
-                                        <!--<StackPanel Orientation="Horizontal" Width="120" Height="35" HorizontalAlignment="Center" VerticalAlignment="Stretch">
-                                    <TextBlock Margin="10,0,-65,0" Text="Lokation" Height="22" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Center"  VerticalAlignment="Stretch"/>
-                                    <TextBox  Margin="25,0,-231,0" Background="White" Text="{Binding Location, Mode=TwoWay}" FontFamily="Calibri Light" Height="35" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                </StackPanel>-->
-
-
                                     </StackPanel>
-
-
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-
 
                     </StackPanel>
                     <StackPanel Height="40" Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -100,28 +84,29 @@
                             </Button.RenderTransform>
                         </Button>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Height="137" Margin="700,-1300,0,0" HorizontalAlignment="Left" Width="198" VerticalAlignment="Stretch">
-                        <Button Command="{Binding DeleteCommand}" Content="Slet artefakt" HorizontalAlignment="Stretch" Margin="0,10,31.4,10" VerticalAlignment="Stretch" Background="White" Foreground="Black" />
-                        <Button Command="{Binding UpdateCommand}" Content="Rediger artefakt" HorizontalAlignment="Stretch" Margin="0,0,31.4,0" VerticalAlignment="Stretch" Background="White" Foreground="Black" />
-                        <Button Command="{Binding SaveCommand}" Margin="0,10,0,0" Width="167" Height="39"  Content="Gem ændringer" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
-                        <!--<Button Content="Vis info" HorizontalAlignment="Stretch" Margin="0,10,31.4,0" VerticalAlignment="Stretch" Background="White" Foreground="Black" Click="Button_Click_1" />-->
+                    <StackPanel Orientation="Vertical" Height="166" Margin="700,-1300,0,0" HorizontalAlignment="Left" Width="614">
+                        <Button Command="{Binding DeleteCommand}" Content="Slet artefakt" HorizontalAlignment="left" Margin="0,25,31.4,10" VerticalAlignment="Stretch" Background="White" Foreground="Black" Width="167" />
+                        <Button Command="{Binding UpdateCommand}" Content="Rediger artefakt" HorizontalAlignment="left" Margin="0,0,31.4,0" VerticalAlignment="Stretch" Width="167" Background="White" Foreground="Black" />
+                        <Button Command="{Binding SaveCommand}" Margin="0,10,337,0" Height="39" Width="167"  Content="Gem ændringer" Foreground="Black" HorizontalAlignment="left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
+                        <Button Command="{Binding AddR1}" Margin="300,-145,0,0" Width="167" Height="35"  Content="Tilføj til Rundvisning 1" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
+                        <Button Command="{Binding AddR2}" Margin="300,-105,0,0" Width="167" Height="35"  Content="Tilføj til Rundvisning 2" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
+                        <Button Command="{Binding AddR3}"  Margin="300,-65,0,0" Width="167" Height="35"  Content="Tilføj til Rundvisning 3" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
+                        <Button Command="{Binding AddR4}" Margin="300,-25,0,0" Width="167" Height="35"  Content="Tilføj til Rundvisning 4" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
+                        <Button Command="{Binding SaveCommandTour}" Margin="500,-35,0,0" Width="60" Height="35"  Content="Gem" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Background="white" FontFamily="Calibri Light" />
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="52" Margin="700,-1120,0,0" HorizontalAlignment="Left" Width="504">
+                    <StackPanel Orientation="Horizontal" Height="52" Margin="700,-1080,0,0" HorizontalAlignment="Left" Width="504">
                         <Button Content="Søg" HorizontalAlignment="Stretch" Margin="0,10,0,0" Width="167" VerticalAlignment="Stretch" Background="White" Foreground="Black" Height="37"></Button>
                         <TextBox  Margin="12.8,0,-333,-10" Background="White" FontFamily="Calibri Light" Foreground="Black" Height="39" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  PlaceholderText="Søg her" />
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="52" Margin="700,-1000,0,0" HorizontalAlignment="Left" Width="504" VerticalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" Height="58" Margin="700,-970,0,0" HorizontalAlignment="Left" Width="504">
                         <TextBox  Margin="-1,0,-500,0" Background="White" FontFamily="Calibri Light" Foreground="Black" Height="51"  PlaceholderText="Info om artefakt" />
                     </StackPanel>
 
-                    <StackPanel Height="463" Margin="0,-490,163.8,0" Orientation="Vertical" HorizontalAlignment="Right" Width="615" VerticalAlignment="Stretch">
+                    <StackPanel Height="421" Margin="0,-490,163.8,0" Orientation="Vertical" HorizontalAlignment="Right" Width="615">
                         <TextBlock Text="Info om artefakt" Foreground="White" Margin="0,0,0,0" Height="50" FontFamily="Calibri Light" FontSize="40"  HorizontalAlignment="Left" Width="326" VerticalAlignment="Stretch" />
-                        <TextBox x:Name="Minboks" Text="{Binding SelectedDisplay.Info, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" Height="382" Margin="0,0,114.2,0" Foreground="Black" Background="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                        <!--<TextBlock Text="{Binding Info}" Foreground="White" Margin="752,-1150,0,-150" Height="53" FontFamily="Calibri Light" FontSize="20" > </TextBlock>-->
-                        <!--<ListView ItemsSource="{Binding Info}" SelectedItem="{Binding SelectedDisplay}" Background="DarkSlateGray" Foreground="White" Height="460" Margin="0,0,0,0" HorizontalAlignment="Center" Width="725" VerticalAlignment="Stretch"/>-->
-
+                        <TextBox x:Name="Minboks" Text="{Binding SelectedDisplay.Info, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" Height="349" Margin="0,0,114.2,0" Foreground="Black" Background="White" FontFamily="Calibri Light" FontSize="18" />
                     </StackPanel>
 
                 </StackPanel>
